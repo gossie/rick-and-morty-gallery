@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Character from '../../model/character'
@@ -62,7 +63,7 @@ interface SingleCharacterProps {
 function SingleCharacter(props: SingleCharacterProps) {
     return (
         <Link href={`/characters/${props.character.id}`}>
-            <img src={props.character.image} />
+            <img src={props.character.image} alt={props.character.name} />
         </Link>
     )
 }

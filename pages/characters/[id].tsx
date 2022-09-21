@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Head from 'next/head'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import Character from '../../model/character'
@@ -35,7 +36,7 @@ export default function CharacterDetails() {
             <main className={styles.main}>
                 { character &&
                     <>
-                        <img src={character.image} />
+                        <img src={character.image}  alt={character.name} />
                         <button onClick={add}>Add to fav</button>
                     </>
                 }
